@@ -1,268 +1,275 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Дядя Ашот</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дядя Ашот</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
 
+  <div class="zadni-fon">
   <div class="site">
 
-    <!-- ШАПКА -->
-    <header class="header">
-      <div class="header-bar"></div>
-      <button class="order-btn">Заказать</button>
-      <div class="header-center">
-        <img class="header-ashot" src="img/dyadya_ashot_logo_sayta.svg" alt="Ашот">
-        <div class="logo">Дядя Ашот</div>
-      </div>
-    </header>
-
-    <!-- HERO / КАРУСЕЛЬ -->
-    <section class="hero" id="hero-carousel" role="region" aria-roledescription="карусель"
-      aria-label="Сравнение с конкурентами" tabindex="0">
-      <div class="hero-slide hero-slide--competitor is-active">
-        <div class="hero-img">
-          <img class="hero-car" src="img/mashina_konkurentov.svg" alt="Машина конкурентов">
+      <!-- ШАПКА -->
+      <header class="header">
+        <div class="header-bar"></div>
+        <button class="order-btn">Заказать</button>
+        <div class="header-center">
+          <img class="header-ashot" src="img/dyadya_ashot_logo_sayta.svg" alt="Ашот">
+          <div class="logo">Дядя Ашот</div>
         </div>
-        <p class="hero-text">
-          надоело что водитель такси к вам относиться небрежно?<br>
-          Дядя Ашот такого не допустит.
-        </p>
-      </div>
-
-      <div class="hero-slide hero-slide--ashot">
-        <div class="hero-img">
-          <img class="hero-car" src="img/mashina_nashego_taksi.svg" alt="Машина Дяди Ашота">
+      </header>
+  
+      <!-- HERO / КАРУСЕЛЬ -->
+      <section class="hero" id="hero-carousel" role="region" aria-roledescription="карусель"
+        aria-label="Сравнение с конкурентами" tabindex="0">
+        <div class="hero-slide hero-slide--competitor is-active">
+          <div class="hero-img">
+            <img class="hero-car" src="img/mashina_konkurentov.svg" alt="Машина конкурентов">
+          </div>
+          <p class="hero-text">
+            надоело что водитель такси к вам относиться небрежно?<br>
+            Дядя Ашот такого не допустит.
+          </p>
         </div>
-        <p class="hero-text">
-          В нашем такси вы сможете доехать с комфортом, во время и в безопасности.<br>
-          Потому что Дяде Ашоту не все равно.
-        </p>
-      </div>
-
-      <div class="hero-progress" aria-hidden="true">
-        <span class="hero-progress-bar"></span>
-      </div>
-    </section>
-
-    <!-- О НАС / ИСТОРИЯ -->
-    <div class="strip">О нас</div>
-    <section class="about" id="about-carousel" aria-label="История Дяди Ашота">
-      <div class="about-avatar">
-        <img src="img/dyadya_ashot_logo_sayta.svg" alt="Ашот">
-      </div>
-      <div class="about-speech-wrap" aria-live="polite">
-        <div class="speech-bubble" aria-hidden="true"></div>
-
-        <p class="about-speech is-active" aria-hidden="false">
-          Вечер. Живот урчит — соседи стучат, думают, ремонт. Захотел шаурму у тёзки
-          Ашота на другом конце города — соус фирменный, мясо с дымком, лаваш тонкий,
-          как надежда на скидку.<br><br>
-          Сорок минут пешком? Я что, дурак? Вызвал такси. Приезжает — попал, дорогой.
-          Лихач: газ в пол, руль одной рукой, вторая в телефоне. Курит — дым такой, что
-          коптимся как окорок. Говорю: «Окно открой, я шаурму хочу чувствовать, а не твой табак».
-        </p>
-
-        <p class="about-speech" aria-hidden="true">
-          А он: «Сядь ровно, я профессионал». Вай, профессионал — в телефоне ленту
-          листает, а мы уже чуть в столб не влетели. И тут — бах. Авария. Таксист:
-          «Это он виноват». Второй: «Ты в телефоне сидел, джигит». Я между ними, живот
-          урчит, думаю: «Ашот, зачем тебе это надо было? Пошёл бы пешком — уже бы ел».
-          Таксист: «Брат, извини, бесплатно доеду». А я: «До шаурмы довези, дальше сам
-          пешком».<br><br>
-          Доехали. Выхожу — ноги трясутся, дымом пропитался, но шаурма... Вай, ме.
-          Всё забыл. Стою, ем: «Вот она, жизнь — сначала потрясёт, а потом накормит».
-        </p>
-
-        <p class="about-speech" aria-hidden="true">
-          Но слушай дальше. После аварии я, Ашот, на диван не просто так сел. Доедал
-          вторую шаурму — первая от стресса не в счёт — и думал: «Это же идея». Раз
-          таксисты курят, в телефоне сидят, грубят — сделаю свой сервис, где всё
-          по-другому. Назвал «Дядя Ашот». Красиво, дорогой — и пугать никого не надо.<br><br>
-          Правила простые. Первое — не курят. Вообще. Хочешь курить — выходи, кури,
-          потом садись. В салоне чистота и лаванда. Второе — телефон в держателе,
-          трогать только если навигатор скажет «поверни направо». Третье — вежливость.
-          Говорю водителям: «Ты не таксист, ты лицо сервиса. Улыбайся, здоровайся.
-          Пассажир хочет тишины — молчи. Хочет поговорить — говори, но не груби».
-        </p>
-
-        <p class="about-speech" aria-hidden="true">
-          И знаешь что? Работает. Четвёртое — моя гордость — купон на шаурму каждому
-          пассажиру. Я, Ашот, договорился с Ашотом — тем, который шаурму делает. Он мне
-          скидку, я ему клиентов. Вай, ме, красиво.<br><br>
-          И самое главное — я сам иногда за руль сажусь. Да-да, дядя Ашот таксует.
-          Пассажир садится, а я: «Салам, дорогой. Куда едем? Не волнуйся — не курю,
-          в телефон не смотрю, и если хочешь, расскажу, как я, Ашот, чуть шаурму из-за
-          лихача не потерял». Люди смеются, чаевые оставляют. Вот так, дорогой. Одна
-          авария — и целый бизнес. Главное — не злиться, а думать: «А как сделать
-          лучше?» Но шаурма — это святое, дорогой.
-        </p>
-
-        <button class="arrow arrow--left" type="button" aria-label="Предыдущая часть истории">
-          <img src="img/knopka_vernut_nazad.svg" alt="">
-        </button>
-        <button class="arrow arrow--right" type="button" aria-label="Следующая часть истории">
-          <img src="img/knopka_dalshe.svg" alt="">
-        </button>
-      </div>
-    </section>
-
-    <!-- ТОЛЬКО У НАС -->
-    <div class="strip">Только у нас</div>
-
-    <!-- ТАРИФ 1 -->
-    <section class="tariff tariff--1">
-      <div class="tariff-content">
-        <div class="left-card">
-          <h2 class="tariff-title">Курящий водитель</h2>
-          <span class="tariff-price">от 590₽</span>
+  
+        <div class="hero-slide hero-slide--ashot">
+          <div class="hero-img">
+            <img class="hero-car" src="img/mashina_nashego_taksi.svg" alt="Машина Дяди Ашота">
+          </div>
+          <p class="hero-text">
+            В нашем такси вы сможете доехать с комфортом, во время и в безопасности.<br>
+            Потому что Дяде Ашоту не все равно.
+          </p>
         </div>
-        <div class="tariff-art">
-          <img class="illustration-kalian" src="img/kalyan.svg" alt="Кальян">
-          <img class="illustration-kalianmen" src="img/kalyanshchik.svg" alt="Кальянщик">
+  
+        <div class="hero-progress" aria-hidden="true">
+          <span class="hero-progress-bar"></span>
         </div>
-        <p class="right-card">
-          Слушай, дорогой, вот тебе первый тариф — вай, ме! Помнишь мою историю?
-          Хватит нюхать чужой табак. Здесь кальян включён в стоимость — садись,
-          раскуривай, дым в окно, угли поправим. Водитель тоже с дымком, но
-          за рулём — как скала. Кальянщик приедет вместе с машиной, всё культурно,
-          как в лучших домах Тбилиси. А в конце — купон на шаурму у моего тёзки.
-          Кури, дорогой, но помни: шаурма — это святое!
-        </p>
-      </div>
-    </section>
-
-    <div class="strip"></div>
-
-    <!-- ТАРИФ 2 -->
-    <section class="tariff tariff--2">
-      <div class="tariff-content">
-        <div class="left-card">
-          <h2 class="tariff-title">Покушай братишка</h2>
-          <span class="tariff-price">от 490₽</span>
+      </section>
+  
+      <!-- О НАС / ИСТОРИЯ -->
+      <div class="strip">О нас</div>
+      <section class="about" id="about-carousel" aria-label="История Дяди Ашота">
+        <div class="about-avatar">
+          <img src="img/dyadya_ashot_logo_sayta.svg" alt="Ашот">
         </div>
-        <div class="tariff-art">
-          <img class="illustration-shaurma" src="img/vertel.svg" alt="Вертел">
-          <img class="illustration-shaurmist" src="img/shaurmist.svg" alt="Шаурмист">
+        <div class="about-speech-wrap" aria-live="polite">
+          <div class="speech-bubble" aria-hidden="true"></div>
+          
+          <p class="about-speech is-active" aria-hidden="false">
+           Слушай, дорогой, садись - история будет, вай, ме. Я Ашот, грузин, шаурму люблю.
+          </p>
+  
+  
+          <p class="about-speech is-active" aria-hidden="true">
+            Вечер. Живот урчит — соседи стучат, думают, ремонт. Захотел шаурму у тёзки
+            Ашота на другом конце города — соус фирменный, мясо с дымком, лаваш тонкий,
+            как надежда на скидку.<br><br>
+            Сорок минут пешком? Я что, дурак? Вызвал такси. Приезжает — попал, дорогой.
+            Лихач: газ в пол, руль одной рукой, вторая в телефоне. Курит — дым такой, что
+            коптимся как окорок. Говорю: «Окно открой, я шаурму хочу чувствовать, а не твой табак».
+          </p>
+  
+          <p class="about-speech" aria-hidden="true">
+            А он: «Сядь ровно, я профессионал». Вай, профессионал — в телефоне ленту
+            листает, а мы уже чуть в столб не влетели. И тут — бах. Авария. Таксист:
+            «Это он виноват». Второй: «Ты в телефоне сидел, джигит». Я между ними, живот
+            урчит, думаю: «Ашот, зачем тебе это надо было? Пошёл бы пешком — уже бы ел».
+            Таксист: «Брат, извини, бесплатно доеду». А я: «До шаурмы довези, дальше сам
+            пешком».<br><br>
+            Доехали. Выхожу — ноги трясутся, дымом пропитался, но шаурма... Вай, ме.
+            Всё забыл. Стою, ем: «Вот она, жизнь — сначала потрясёт, а потом накормит».
+          </p>
+  
+          <p class="about-speech" aria-hidden="true">
+            Но слушай дальше. После аварии я, Ашот, на диван не просто так сел. Доедал
+            вторую шаурму — первая от стресса не в счёт — и думал: «Это же идея». Раз
+            таксисты курят, в телефоне сидят, грубят — сделаю свой сервис, где всё
+            по-другому. Назвал «Дядя Ашот». Красиво, дорогой — и пугать никого не надо.<br><br>
+            Правила простые. Первое — не курят. Вообще. Хочешь курить — выходи, кури,
+            потом садись. В салоне чистота и лаванда. Второе — телефон в держателе,
+            трогать только если навигатор скажет «поверни направо». Третье — вежливость.
+            Говорю водителям: «Ты не таксист, ты лицо сервиса. Улыбайся, здоровайся.
+            Пассажир хочет тишины — молчи. Хочет поговорить — говори, но не груби».
+          </p>
+  
+          <p class="about-speech" aria-hidden="true">
+            И знаешь что? Работает. Четвёртое — моя гордость — купон на шаурму каждому
+            пассажиру. Я, Ашот, договорился с Ашотом — тем, который шаурму делает. Он мне
+            скидку, я ему клиентов. Вай, ме, красиво.<br><br>
+            И самое главное — я сам иногда за руль сажусь. Да-да, дядя Ашот таксует.
+            Пассажир садится, а я: «Салам, дорогой. Куда едем? Не волнуйся — не курю,
+            в телефон не смотрю, и если хочешь, расскажу, как я, Ашот, чуть шаурму из-за
+            лихача не потерял». Люди смеются, чаевые оставляют. Вот так, дорогой. Одна
+            авария — и целый бизнес. Главное — не злиться, а думать: «А как сделать
+            лучше?» Но шаурма — это святое, дорогой.
+          </p>
+  
+          <button class="arrow arrow--left" type="button" aria-label="Предыдущая часть истории">
+            <img src="img/knopka_vernut_nazad.svg" alt="">
+          </button>
+          <button class="arrow arrow--right" type="button" aria-label="Следующая часть истории">
+            <img src="img/knopka_dalshe.svg" alt="">
+          </button>
         </div>
-        <p class="right-card">
-          Этот тариф для тех, кто едет не просто так, а с аппетитом. Заказываешь
-          поездку — и пока мы едем, у тебя уже горячая шаурма, соус фирменный,
-          всё как надо. Едем — кушаем, всё по-нашему, по-грузински. Но вот честно,
-          брат, до сих пор в голове не укладывается:
-          <b>как он этот вертел с мясом туда поместил, чтобы шаурму горячую делать?</b>
-          Сам в шоке! Наверное, у него мотор как у «Мерседеса» — тянет будь здоров.
-          Зато шаурма всегда с пылу с жару. Заказывай, брат, голодным не уедешь!
-        </p>
-      </div>
-    </section>
-
-    <div class="strip"></div>
-
-    <!-- ТАРИФ 3 -->
-    <section class="tariff tariff--3">
-      <div class="tariff-content">
-        <div class="left-card">
-          <h2 class="tariff-title">Сам делал, брат</h2>
-          <span class="tariff-price">от 690₽</span>
+      </section>
+  
+      <!-- ТОЛЬКО У НАС -->
+      <div class="strip">Только у нас</div>
+  
+      <!-- ТАРИФ 1 -->
+      <section class="tariff tariff--1">
+        <div class="tariff-content">
+          <div class="left-card">
+            <h2 class="tariff-title">Курящий водитель</h2>
+            <span class="tariff-price">от 590₽</span>
+          </div>
+          <div class="tariff-art">
+            <img class="illustration-kalian" src="img/kalyan.svg" alt="Кальян">
+            <img class="illustration-kalianmen" src="img/kalyanshchik.svg" alt="Кальянщик">
+          </div>
+          <p class="right-card">
+            Слушай, дорогой, вот тебе первый тариф — вай, ме! Помнишь мою историю?
+            Хватит нюхать чужой табак. Здесь кальян включён в стоимость — садись,
+            раскуривай, дым в окно, угли поправим. Водитель тоже с дымком, но
+            за рулём — как скала. Кальянщик приедет вместе с машиной, всё культурно,
+            как в лучших домах Тбилиси. А в конце — купон на шаурму у моего тёзки.
+            Кури, дорогой, но помни: шаурма — это святое!
+          </p>
         </div>
-        <div class="tariff-art">
-          <img class="illustration-wine" src="img/vino.svg" alt="Вино">
-          <img class="illustration-sommelier" src="img/somele.svg" alt="Сомелье">
+      </section>
+  
+      <div class="strip"></div>
+  
+      <!-- ТАРИФ 2 -->
+      <section class="tariff tariff--2">
+        <div class="tariff-content">
+          <div class="left-card">
+            <h2 class="tariff-title">Покушай братишка</h2>
+            <span class="tariff-price">от 490₽</span>
+          </div>
+          <div class="tariff-art">
+            <img class="illustration-shaurma" src="img/vertel.svg" alt="Вертел">
+            <img class="illustration-shaurmist" src="img/shaurmist.svg" alt="Шаурмист">
+          </div>
+          <p class="right-card">
+            Этот тариф для тех, кто едет не просто так, а с аппетитом. Заказываешь
+            поездку — и пока мы едем, у тебя уже горячая шаурма, соус фирменный,
+            всё как надо. Едем — кушаем, всё по-нашему, по-грузински. Но вот честно,
+            брат, до сих пор в голове не укладывается:
+            <b>как он этот вертел с мясом туда поместил, чтобы шаурму горячую делать?</b>
+            Сам в шоке! Наверное, у него мотор как у «Мерседеса» — тянет будь здоров.
+            Зато шаурма всегда с пылу с жару. Заказывай, брат, голодным не уедешь!
+          </p>
         </div>
-        <p class="right-card">
-          Для ценителей прекрасного. В багажнике у нашего водителя всегда стоит
-          бочка с домашним вином, так что поездка будет не только комфортной,
-          но и с правильным настроением. Пока едем, он расскажет, какое вино лучше
-          к какому тосту. Однажды один наш водитель так увлёкся дегустацией,
-          что привёз клиента не туда, куда он просил, а туда, где лучше наливают.
-          Но клиент не обиделся — вино было отличное!
-        </p>
-      </div>
-    </section>
-
-    <div class="strip"></div>
-
-    <!-- ТАРИФ 4 -->
-    <section class="tariff tariff--4">
-      <div class="tariff-content">
-        <div class="left-card">
-          <h2 class="tariff-title">С ветерком</h2>
-          <span class="tariff-price">от 450₽</span>
+      </section>
+  
+      <div class="strip"></div>
+  
+      <!-- ТАРИФ 3 -->
+      <section class="tariff tariff--3">
+        <div class="tariff-content">
+          <div class="left-card">
+            <h2 class="tariff-title">Сам делал, брат</h2>
+            <span class="tariff-price">от 690₽</span>
+          </div>
+          <div class="tariff-art">
+            <img class="illustration-wine" src="img/vino.svg" alt="Вино">
+            <img class="illustration-sommelier" src="img/somele.svg" alt="Сомелье">
+          </div>
+          <p class="right-card">
+            Для ценителей прекрасного. В багажнике у нашего водителя всегда стоит
+            бочка с домашним вином, так что поездка будет не только комфортной,
+            но и с правильным настроением. Пока едем, он расскажет, какое вино лучше
+            к какому тосту. Однажды один наш водитель так увлёкся дегустацией,
+            что привёз клиента не туда, куда он просил, а туда, где лучше наливают.
+            Но клиент не обиделся — вино было отличное!
+          </p>
         </div>
-        <div class="tariff-art">
-          <img class="illustration-wheel-fier" src="img/koleso_v_ogne.svg" alt="Колесо">
-          <img class="illustration-shumaher" src="img/voditel_shumakher.svg" alt="Шумахер">
+      </section>
+  
+      <div class="strip"></div>
+  
+      <!-- ТАРИФ 4 -->
+      <section class="tariff tariff--4">
+        <div class="tariff-content">
+          <div class="left-card">
+            <h2 class="tariff-title">С ветерком</h2>
+            <span class="tariff-price">от 450₽</span>
+          </div>
+          <div class="tariff-art">
+            <img class="illustration-wheel-fier" src="img/koleso_v_ogne.svg" alt="Колесо">
+            <img class="illustration-shumaher" src="img/voditel_shumakher.svg" alt="Шумахер">
+          </div>
+          <p class="right-card">
+            Для тех, кто опаздывает на самолёт, на свидание или на важную встречу.
+            Наш водитель доставит с ветерком, как на «Формуле-1», только с грузинским
+            акцентом. Летит так, что ГИБДД нас фотографирует на память! Но не бойся,
+            брат, тормоза у него как совесть — всегда срабатывают вовремя.
+          </p>
         </div>
-        <p class="right-card">
-          Для тех, кто опаздывает на самолёт, на свидание или на важную встречу.
-          Наш водитель доставит с ветерком, как на «Формуле-1», только с грузинским
-          акцентом. Летит так, что ГИБДД нас фотографирует на память! Но не бойся,
-          брат, тормоза у него как совесть — всегда срабатывают вовремя.
-        </p>
-      </div>
-    </section>
-
-    <div class="strip"></div>
-
-    <!-- ТАРИФ 5 -->
-    <section class="tariff tariff--5">
-      <div class="tariff-content">
-        <div class="left-card">
-          <h2 class="tariff-title">Душевная поездка</h2>
-          <span class="tariff-price">от 550₽</span>
+      </section>
+  
+      <div class="strip"></div>
+  
+      <!-- ТАРИФ 5 -->
+      <section class="tariff tariff--5">
+        <div class="tariff-content">
+          <div class="left-card">
+            <h2 class="tariff-title">Душевная поездка</h2>
+            <span class="tariff-price">от 550₽</span>
+          </div>
+          <div class="tariff-art">
+            <img class="illustration" src="img/psikholog.svg" alt="Психолог">
+          </div>
+          <p class="right-card">
+            Это для тех, кому нужен не просто водитель, а настоящий друг. Будете
+            говорить за жизнь, петь песни, и он расскажет тебе пару старых грузинских
+            тостов. Однажды один пассажир так с нашим водителем заговорился, что они
+            проехали нужную остановку и дважды объехали Тбилиси. Зато теперь они
+            родственники!
+          </p>
         </div>
-        <div class="tariff-art">
-          <img class="illustration" src="img/psikholog.svg" alt="Психолог">
+      </section>
+  
+      <div class="strip"></div>
+  
+      <!-- ТАРИФ 6 -->
+      <section class="tariff tariff--6">
+        <div class="tariff-content">
+          <div class="left-card">
+            <h2 class="tariff-title">Обычный</h2>
+            <span class="tariff-price">от 199₽</span>
+          </div>
+          <div class="tariff-art">
+            <img class="illustration" src="img/prosto_voditel.svg" alt="Водитель">
+          </div>
+          <p class="right-card">
+            Для тех, кому просто нужно доехать из точки А в точку Б. Без лишних
+            разговоров, без тостов, без шашлыка. Ну, насколько это возможно.
+            Всё равно водитель угостит тебя конфеткой и спросит, как дела.
+            Просто потому что он грузин, а не робот!
+          </p>
         </div>
-        <p class="right-card">
-          Это для тех, кому нужен не просто водитель, а настоящий друг. Будете
-          говорить за жизнь, петь песни, и он расскажет тебе пару старых грузинских
-          тостов. Однажды один пассажир так с нашим водителем заговорился, что они
-          проехали нужную остановку и дважды объехали Тбилиси. Зато теперь они
-          родственники!
-        </p>
-      </div>
-    </section>
-
-    <div class="strip"></div>
-
-    <!-- ТАРИФ 6 -->
-    <section class="tariff tariff--6">
-      <div class="tariff-content">
-        <div class="left-card">
-          <h2 class="tariff-title">Обычный</h2>
-          <span class="tariff-price">от 199₽</span>
+      </section>
+  
+      <!-- ФУТЕР -->
+      <footer class="footer">
+        <div class="footer-text">
+          <b>Гамарджоба, дорогой! Это Ашот.</b><br>
+          Обычно тут все пишут скучные юридические тексты, которые никто не читает.
+          Но у нас не так. Читай, мне приятно.<br>
+          <b>Связаться:</b> звони в любое время — я даже с шашлыком в руке трубку возьму.<br>
+          <b>О нас:</b> возим быстро и с комфортом, как дорогого гостя.<br>
+          <b>Мы:</b> всегда рядом — в твоём телефоне.
         </div>
-        <div class="tariff-art">
-          <img class="illustration" src="img/prosto_voditel.svg" alt="Водитель">
-        </div>
-        <p class="right-card">
-          Для тех, кому просто нужно доехать из точки А в точку Б. Без лишних
-          разговоров, без тостов, без шашлыка. Ну, насколько это возможно.
-          Всё равно водитель угостит тебя конфеткой и спросит, как дела.
-          Просто потому что он грузин, а не робот!
-        </p>
-      </div>
-    </section>
-
-    <!-- ФУТЕР -->
-    <footer class="footer">
-      <div class="footer-text">
-        <b>Гамарджоба, дорогой! Это Ашот.</b><br>
-        Обычно тут все пишут скучные юридические тексты, которые никто не читает.
-        Но у нас не так. Читай, мне приятно.<br>
-        <b>Связаться:</b> звони в любое время — я даже с шашлыком в руке трубку возьму.<br>
-        <b>О нас:</b> возим быстро и с комфортом, как дорогого гостя.<br>
-        <b>Мы:</b> всегда рядом — в твоём телефоне.
-      </div>
-      <img class="footer-avatar" src="img/dyadya_ashot_logo_sayta.svg" alt="Ашот">
-    </footer>
-
-  </div>
-  <script src="main.js"></script>
+        <img class="footer-avatar" src="img/dyadya_ashot_logo_sayta.svg" alt="Ашот">
+      </footer>
+  
+    </div>
+    </div>
 </body>
 </html>

@@ -18,12 +18,20 @@ body {
 }
 
 .site {
-  width: 100%;
+  width: 80%;
   max-width: 1920px;
   margin: 0 auto;
   background: linear-gradient(180deg, #232526 0%, #414345 100%);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 50px 100px 10px #c76c03;
+}
+/* задний фон */
+.zadni-fon {
+  width: 100;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #232526 0%, #2f3537 18%, #2f3537 79%, #282726 100%);
 }
 
 /* ============================================================
@@ -213,7 +221,7 @@ body {
   gap: clamp(20px, 2.5vw, 50px);
   width: 100%;
   padding: clamp(28px, 4vw, 40px) clamp(16px, 5vw, 100px);
-  background: linear-gradient(90deg, #2D2D2D 52%, #420C61 100%);
+  background:#2D2A2A;
 }
 
 .about-avatar {
@@ -243,7 +251,6 @@ body {
   padding: clamp(26px, 2.4vw, 44px) var(--bubble-pad-x) clamp(58px, 6.5vw, 108px) calc(var(--tail-w) + var(--bubble-pad-x));
 }
 
-/* Пузырь рисуем в CSS: он тянется по высоте под длинный текст */
 .speech-bubble {
   position: absolute;
   top: 0;
@@ -256,7 +263,6 @@ body {
   z-index: 0;
 }
 
-/* Хвостик пузыря */
 .speech-bubble::before {
   content: "";
   position: absolute;
@@ -268,7 +274,7 @@ body {
   clip-path: polygon(100% 0, 100% 72%, 0 100%);
 }
 
-/* Все реплики лежат в одной ячейке: высота не прыгает при переключении */
+
 .about-speech {
   grid-area: 1 / 1;
   align-self: center;
