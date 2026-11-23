@@ -1,5 +1,5 @@
 /* ============================================================
-   БАЗА
+   БАЗА (mobile-first: сначала мобильные стили)
    ============================================================ */
 * {
   margin: 0;
@@ -15,22 +15,16 @@ body {
   background: #232526;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
 }
 
-/* ------- Масштабирование (задаётся в main.js) ------- */
 .site {
-  position: relative;
-  width: 1920px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   background: linear-gradient(180deg, #232526 0%, #414345 100%);
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
 }
-
-/* img { display: block; max-width: 100%; } */
-
 
 /* ============================================================
    ШАПКА
@@ -38,42 +32,39 @@ body {
 .header {
   position: relative;
   width: 100%;
-  height: 160px;
-  flex-shrink: 0;
+  min-height: clamp(96px, 8.3vw, 160px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 clamp(14px, 3vw, 60px);
 }
 
 .header-bar {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   background: linear-gradient(90deg, #944501 0%, #FF7E0C 24%, #F2BD69 60%);
   z-index: 1;
 }
 
 .order-btn {
-  position: absolute;
-  left: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 320px;
-  height: 90px;
-  font: 300 48px 'Inter', sans-serif;
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  width: clamp(104px, 16.7vw, 320px);
+  height: clamp(42px, 4.7vw, 90px);
+  font: 300 clamp(16px, 2.5vw, 48px) 'Inter', sans-serif;
   color: #fff;
   background: rgba(0, 0, 0, 0.33);
-  border: 5px solid #FF7700;
-  border-radius: 25px;
+  border: clamp(2px, 0.26vw, 5px) solid #FF7700;
+  border-radius: clamp(12px, 1.3vw, 25px);
   cursor: pointer;
   transition: background 0.2s, transform 0.15s;
-  z-index: 3;
 }
 
 .order-btn:hover {
   background: rgba(255, 119, 0, 0.25);
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
 }
 
 .header-center {
@@ -81,19 +72,20 @@ body {
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: 24px;
-}
-
-.logo {
-  font: 400 72px 'Gulim', sans-serif;
-  color: #000;
-  text-align: center;
-  letter-spacing: 2px;
+  gap: clamp(8px, 1.2vw, 24px);
+  min-width: 0;
 }
 
 .header-ashot {
-  width: 90px;
+  width: clamp(40px, 4.7vw, 90px);
   height: auto;
+}
+
+.logo {
+  font: 400 clamp(22px, 3.75vw, 72px) 'Gulim', sans-serif;
+  color: #000;
+  letter-spacing: clamp(0px, 0.1vw, 2px);
+  white-space: nowrap;
 }
 
 /* ============================================================
@@ -102,36 +94,30 @@ body {
 .hero {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: clamp(20px, 3vw, 50px);
   width: 100%;
-  height: 500px;
-  flex-shrink: 0;
-  padding: 0 100px;
+  padding: clamp(28px, 4vw, 40px) clamp(16px, 5vw, 100px);
   background: linear-gradient(90deg, #3B3D3E 0%, #4E0202 100%);
 }
 
 .hero-img {
-  position: relative;
   flex-shrink: 0;
-  width: 500px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: min(100%, clamp(240px, 26vw, 500px));
 }
 
 .hero-car {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
 }
 
 .hero-text {
   flex: 1;
   max-width: 800px;
-  font: 400 42px/1.4 "JetBrains Mono", monospace;
+  font: 400 clamp(18px, 2.2vw, 42px)/1.4 "JetBrains Mono", monospace;
   color: #FFC4C4;
   text-align: center;
 }
@@ -145,9 +131,9 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 90px;
-  flex-shrink: 0;
-  font: 400 54px "JetBrains Mono", monospace;
+  min-height: clamp(48px, 4.7vw, 90px);
+  padding: 6px 16px;
+  font: 400 clamp(20px, 2.8vw, 54px) "JetBrains Mono", monospace;
   color: #000;
   background: linear-gradient(90deg, #CC5F00 0%, #F6A749 55%, #F2BD69 100%);
   letter-spacing: 1px;
@@ -162,26 +148,23 @@ body {
 .about {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: clamp(20px, 2.5vw, 50px);
   width: 100%;
-  height: 520px;
-  flex-shrink: 0;
-  padding: 0 100px;
+  padding: clamp(28px, 4vw, 40px) clamp(16px, 5vw, 100px);
   background: linear-gradient(90deg, #2D2D2D 52%, #420C61 100%);
 }
 
 .about-avatar {
   flex-shrink: 0;
-  width: 250px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: clamp(120px, 13vw, 250px);
+  height: clamp(144px, 15.6vw, 300px);
 }
 
 .about-avatar img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -190,8 +173,9 @@ body {
 .about-speech-wrap {
   position: relative;
   flex: 1;
+  width: 100%;
   max-width: 1430px;
-  height: 390px;
+  min-height: clamp(220px, 22vw, 390px);
 }
 
 .speech-bubble {
@@ -209,8 +193,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 140px;
-  font: 400 34px/1.4 'Inter', sans-serif;
+  padding: 16px clamp(48px, 9vw, 120px) 56px;
+  font: 400 clamp(16px, 1.8vw, 34px)/1.4 'Inter', sans-serif;
   color: #fff;
   z-index: 2;
   text-align: center;
@@ -218,17 +202,17 @@ body {
 
 .arrow {
   position: absolute;
-  bottom: 18px;
-  width: 80px;
-  height: 80px;
+  bottom: clamp(8px, 0.94vw, 18px);
+  width: clamp(40px, 4.2vw, 80px);
+  height: auto;
   cursor: pointer;
   z-index: 3;
   transition: transform 0.2s;
 }
 
 .arrow:hover { transform: scale(1.1); }
-.arrow--left  { left: 24px; }
-.arrow--right { right: 24px; }
+.arrow--left  { left: clamp(8px, 1.3vw, 24px); }
+.arrow--right { right: clamp(8px, 1.3vw, 24px); }
 
 /* ============================================================
    ТАРИФЫ
@@ -236,110 +220,97 @@ body {
 .tariff {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
   color: #fff;
-  overflow: hidden;
 }
 
 .tariff-content {
-  display: grid;
-  grid-template-columns: 720px 800px;
-  grid-template-rows: 180px 500px;
-  column-gap: 80px;
-  row-gap: 20px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: clamp(18px, 2.4vw, 24px);
   width: 100%;
   max-width: 1600px;
-  padding: 50px 0;
   margin: 0 auto;
+  padding: clamp(32px, 4vw, 50px) 16px;
 }
 
 /* Левая карточка */
 .tariff .left-card {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: end;
-  justify-self: start;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 450px;
-  height: 180px;
-  padding: 20px 40px;
+  width: 100%;
+  max-width: 450px;
+  min-height: clamp(110px, 9.4vw, 180px);
+  padding: clamp(14px, 1.5vw, 20px) clamp(22px, 2vw, 40px);
   background: rgba(139, 94, 0, 0.6);
-  border-radius: 25px;
+  border-radius: clamp(14px, 1.3vw, 25px);
   z-index: 2;
 }
 
 .tariff .tariff-title {
-  font: 400 46px/1.1 "JejuMyeongjo", serif;
+  font: 400 clamp(26px, 2.4vw, 46px)/1.1 "JejuMyeongjo", serif;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: clamp(4px, 0.5vw, 10px);
 }
 
 .tariff .tariff-price {
-  font-size: 32px;
+  font-size: clamp(20px, 1.7vw, 32px);
   color: #fff;
   font-family: 'Inter', sans-serif;
 }
 
-/* Иллюстрации */
+/* Иллюстрации: картинки делят ширину, не наезжают друг на друга */
 .tariff-art {
-  position: relative;
-  grid-column: 1;
-  grid-row: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(8px, 1.2vw, 20px);
   width: 100%;
-  height: 500px;
-}
-
-.tariff-art img {
-  position: absolute;
-  bottom: 0;
-  height: auto;
   z-index: 1;
 }
 
+.tariff-art img {
+  display: block;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.tariff-art img:only-child {
+  flex: 0 1 55%;
+}
+
+/* Пропорции пар «предмет + персонаж» */
+.tariff--1 .illustration-kalian    { flex: 43 1 0; }
+.tariff--1 .illustration-kalianmen { flex: 57 1 0; }
+
+.tariff--2 .illustration-shaurma   { flex: 37 1 0; }
+.tariff--2 .illustration-shaurmist { flex: 63 1 0; }
+
+.tariff--3 .illustration-wine      { flex: 34 1 0; }
+.tariff--3 .illustration-sommelier { flex: 66 1 0; }
+
+.tariff--4 .illustration-wheel-fier { flex: 67 1 0; }
+.tariff--4 .illustration-shumaher   { flex: 33 1 0; }
+
 /* Правая карточка */
 .tariff .right-card {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: center;
-  width: 800px;
-  min-height: 350px;
-  padding: 40px 50px;
-  font: italic 400 26px/1.5 'Inter', sans-serif;
-  color: #fff;
-  background: rgba(139, 139, 139, 0.40);
-  border-radius: 25px;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  min-height: clamp(180px, 18vw, 350px);
+  padding: clamp(20px, 2vw, 40px) clamp(22px, 2.6vw, 50px);
+  font: italic 400 clamp(16px, 1.35vw, 26px)/1.5 'Inter', sans-serif;
+  color: #fff;
+  background: rgba(139, 139, 139, 0.40);
+  border-radius: clamp(14px, 1.3vw, 25px);
+  z-index: 2;
 }
-
-/* Тариф 1 */
-.tariff--1 .illustration-kalian    { left: 25px;  width: 330px; }
-.tariff--1 .illustration-kalianmen { left: 285px; width: 410px; }
-
-/* Тариф 2 */
-.tariff--2 .illustration-shaurma   { left: 135px; width: 190px; }
-.tariff--2 .illustration-shaurmist { left: 285px; width: 300px; }
-
-/* Тариф 3 */
-.tariff--3 .illustration-wine      { left: 155px; width: 140px; }
-.tariff--3 .illustration-sommelier { left: 265px; width: 300px; }
-
-/* Тариф 4 */
-.tariff--4 .illustration-wheel-fier { left: 85px;  width: 280px; bottom: 90px; }
-.tariff--4 .illustration-shumaher   { left: 335px; width: 300px; }
-
-/* Тариф 5 */
-.tariff--5 .illustration { left: 160px; width: 400px; }
-
-/* Тариф 6 */
-.tariff--6 .illustration { left: 200px; width: 320px; }
 
 /* Фоны */
 .tariff--1 { background: linear-gradient(90deg, #2D2D2D 52%, #420C61 100%); }
@@ -355,28 +326,105 @@ body {
 .footer {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: clamp(24px, 3vw, 60px);
   width: 100%;
-  height: 400px;
-  flex-shrink: 0;
-  padding: 0 100px;
+  padding: clamp(32px, 4vw, 40px) clamp(16px, 5vw, 100px);
   color: #fff;
   background: #161616;
 }
 
 .footer-text {
   max-width: 1100px;
-  font: 400 24px/1.6 'Inter', sans-serif;
-  text-align: left;
+  font: 400 clamp(15px, 1.25vw, 24px)/1.6 'Inter', sans-serif;
+  text-align: center;
 }
 
 .footer-text b { font-weight: 700; }
 
 .footer-avatar {
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: clamp(90px, 10.4vw, 200px);
+  height: clamp(90px, 10.4vw, 200px);
   object-fit: contain;
+}
+
+/* ============================================================
+   ПЛАНШЕТЫ И ДЕСКТОП (mobile-first: расширяем макет)
+   ============================================================ */
+@media (min-width: 900px) {
+  .header {
+    justify-content: center;
+  }
+
+  .order-btn {
+    position: absolute;
+    left: clamp(14px, 3vw, 60px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .order-btn:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .hero {
+    flex-direction: row;
+    min-height: 500px;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .about-speech {
+    padding: 0 140px;
+  }
+
+  .footer {
+    flex-direction: row;
+    min-height: 400px;
+  }
+
+  .footer-text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1100px) {
+  .tariff-content {
+    display: grid;
+    grid-template-columns: 9fr 10fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: clamp(40px, 4vw, 80px);
+    row-gap: 20px;
+    padding: 50px 24px;
+  }
+
+  .tariff .left-card {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+  }
+
+  .tariff-art {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .tariff .right-card {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .tariff-content {
+    padding: 50px 0;
+  }
 }
