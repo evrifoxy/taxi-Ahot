@@ -31,7 +31,7 @@ body {
   width: 100;
   height: 100%;
   position: relative;
-  background: linear-gradient(180deg, #232526 0%, #2f3537 18%, #2f3537 79%, #282726 100%);
+  background: linear-gradient(180deg, #171718 0%, #1b1e1f 18%, #1b1e1f 79%, #171718 100%);
 }
 
 /* ============================================================
@@ -370,20 +370,21 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Иллюстрации: картинки делят ширину, не наезжают друг на друга */
+/* Иллюстрации: все картинки выравниваются по одной высоте */
 .tariff-art {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   gap: clamp(8px, 1.2vw, 20px);
   width: 100%;
+  height: clamp(150px, 18vw, 320px);
   z-index: 1;
 }
 
 .tariff-art img {
   display: block;
   width: auto;
-  height: auto;
+  height: 100%;
   min-width: 0;
   max-width: 100%;
   object-fit: contain;
@@ -461,6 +462,138 @@ body {
 }
 
 /* ============================================================
+   ОКНО ЗАКАЗА
+   ============================================================ */
+body.order-modal-open {
+  overflow: hidden;
+}
+
+.order-modal[hidden] {
+  display: none;
+}
+
+.order-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 4vw, 48px);
+}
+
+.order-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68);
+}
+
+.order-modal__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 5vw, 116px);
+  width: min(100%, 1389px);
+  padding: clamp(32px, 7vw, 87px) clamp(16px, 5vw, 80px);
+  background: #BA6122;
+  border-radius: clamp(24px, 6.9vw, 96px);
+  animation: order-modal-in 0.25s ease-out;
+}
+
+@keyframes order-modal-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+.order-modal__ashot {
+  flex: 0 0 auto;
+  display: block;
+  width: clamp(110px, 34vw, 320px);
+  height: auto;
+}
+
+.order-modal__bubble {
+  width: 100%;
+  padding: clamp(22px, 5vw, 53px) clamp(20px, 4.5vw, 63px);
+  background: #8B8B8B;
+  border-radius: clamp(22px, 6vw, 50px);
+}
+
+.order-modal__text {
+  font: 400 clamp(16px, 4.2vw, 42px)/1.35 Tahoma, Arial, sans-serif;
+  color: #000;
+}
+
+.order-modal__phone {
+  color: inherit;
+  text-decoration: none;
+}
+
+.order-modal__phone:hover,
+.order-modal__phone:focus-visible {
+  text-decoration: underline;
+}
+
+.order-modal__close {
+  position: absolute;
+  left: 3.6%;
+  top: 5.6%;
+  width: clamp(44px, 7.8vw, 111px);
+  height: clamp(44px, 7.7vw, 110px);
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0.9;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.order-modal__close svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.order-modal__close:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.order-modal__close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ============================================================
+   ПРЕДПРОСМОТР ЧЕРЕЗ ПАРАМЕТРЫ URL
+   index.html?width=1920&scroll=about — вместо отдельных HTML-файлов
+   ============================================================ */
+body.is-preview {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 12px;
+  background: #111;
+}
+
+body.is-preview .site {
+  display: none;
+}
+
+.preview-frame {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  height: calc(100vh - 24px);
+  border: 1px solid #444;
+  background: #000;
+}
+
+/* ============================================================
    ПЛАНШЕТЫ И ДЕСКТОП (mobile-first: расширяем макет)
    ============================================================ */
 @media (min-width: 900px) {
@@ -477,6 +610,36 @@ body {
 
   .order-btn:hover {
     transform: translateY(-50%) scale(1.05);
+  }
+
+  .order-modal__card {
+    display: block;
+    aspect-ratio: 1389 / 872;
+    padding: 0;
+  }
+
+  .order-modal__bubble {
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    width: 56.9%;
+    height: 56.2%;
+    padding: 3.8% 4.5% 3.8% 4.3%;
+    border-radius: clamp(20px, 3.6vw, 50px);
+  }
+
+  .order-modal__ashot {
+    position: absolute;
+    left: 4.9%;
+    top: 18.8%;
+    width: 21.7%;
+    max-width: 320px;
+    z-index: 2;
+  }
+
+  .order-modal__text {
+    font-size: clamp(16px, 2.6vw, 42px);
+    line-height: 1.14;
   }
 
   .hero-slide {
